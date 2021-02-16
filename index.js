@@ -12,4 +12,8 @@ app.get('/hello', (req, res) => {
     res.end('Hello ' + process.env.LOGNAME);
 })
 
+app.get('/hello/:name', (req, res) => {
+    res.end('Hello ' + req.params.name);
+})
+
 app.listen(PORT, () => console.log(`App running on :${PORT}`));
